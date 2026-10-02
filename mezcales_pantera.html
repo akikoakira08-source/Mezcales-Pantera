@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mezcales Pantera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f5f2; /* Light, warm background */
+            color: #333;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-pattern {
+            background-color: #1a1a1a;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23333333' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <nav class="bg-black text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-bold brand-font tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-cat"></i> MEZCALES PANTERA
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#sabores" class="hover:text-amber-500 transition-colors">Sabores</a>
+                <a href="#contacto" class="hover:text-amber-500 transition-colors">Contacto</a>
+            </div>
+            <!-- Mobile Menu Button (simplified for this design) -->
+            <a href="#contacto" class="md:hidden bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors">
+                Pedir
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-pattern text-white text-center py-20 px-4 relative overflow-hidden flex flex-col items-center justify-center min-h-[60vh]">
+        <!-- Subtle overlay to ensure text/logo pops against pattern -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
+            <div class="bg-white p-4 rounded-full shadow-2xl mb-8 w-48 h-48 md:w-64 md:h-64 flex items-center justify-center overflow-hidden border-4 border-amber-500">
+                <img src="WhatsApp Image 2026-10-02 at 12.59.29 AM_2.jpeg" alt="Logo Mezcales Pantera" class="w-full h-full object-contain">
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-wide text-amber-500">El Sabor de la Tradición</h1>
+            <p class="text-lg md:text-xl font-light mb-8 max-w-2xl text-gray-300">Descubre nuestra exclusiva selección de cremas de mezcal artesanales. Una experiencia única en cada botella.</p>
+            
+            <a href="#sabores" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg inline-block transform hover:scale-105">
+                Ver Sabores
+            </a>
+        </div>
+    </header>
+
+    <!-- Sabores Section -->
+    <main class="flex-grow">
+        <section id="sabores" class="py-16 px-4 container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 brand-font text-gray-800">Nuestros Sabores</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Elaborados con los mejores ingredientes para ofrecerte una textura suave y un sabor inigualable.</p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Product 1: Nuez -->
+                <article class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-80 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="WhatsApp Image 2026-10-02 at 12.59.30 AM (2)_2.jpeg" alt="Mezcal Pantera sabor Nuez" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800 brand-font">Nuez</h3>
+                            <p class="text-sm text-gray-500 uppercase tracking-widest mb-4">Crema de Mezcal</p>
+                            <p class="text-gray-600 text-sm mb-4">Un sabor clásico y reconfortante, con notas tostadas y una textura cremosa.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2: Capuchino -->
+                <article class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-80 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="WhatsApp Image 2026-10-02 at 12.59.30 AM (1)_2.jpeg" alt="Mezcal Pantera sabor Capuchino" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800 brand-font">Capuchino</h3>
+                            <p class="text-sm text-gray-500 uppercase tracking-widest mb-4">Crema de Mezcal</p>
+                            <p class="text-gray-600 text-sm mb-4">La fusión perfecta entre el café cremoso y el toque distintivo del mezcal.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3: Crema Irlandesa -->
+                <article class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-80 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="WhatsApp Image 2026-10-02 at 12.59.30 AM_2.jpeg" alt="Mezcal Pantera sabor Crema Irlandesa" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800 brand-font">Crema Irlandesa</h3>
+                            <p class="text-sm text-gray-500 uppercase tracking-widest mb-4">Crema de Mezcal</p>
+                            <p class="text-gray-600 text-sm mb-4">Suave, dulce y envolvente. Una versión mexicana de un clásico mundial.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4: Café -->
+                <article class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-80 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="WhatsApp Image 2026-10-02 at 12.59.29 AM (2)_2.jpeg" alt="Mezcal Pantera sabor Café" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800 brand-font">Café</h3>
+                            <p class="text-sm text-gray-500 uppercase tracking-widest mb-4">Crema de Mezcal</p>
+                            <p class="text-gray-600 text-sm mb-4">El sabor profundo del café en su máxima expresión, ideal para la sobremesa.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 5: Mazapán -->
+                <article class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-80 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="WhatsApp Image 2026-10-02 at 12.59.29 AM (1)_2.jpeg" alt="Mezcal Pantera sabor Mazapán" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-gray-800 brand-font">Mazapán</h3>
+                            <p class="text-sm text-gray-500 uppercase tracking-widest mb-4">Crema de Mezcal</p>
+                            <p class="text-gray-600 text-sm mb-4">Un dulce homenaje a México. El inconfundible sabor a cacahuate en cada trago.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contact / Ordering Section -->
+        <section id="contacto" class="bg-white py-16">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="bg-gray-50 rounded-3xl p-8 md:p-12 shadow-inner border border-gray-200">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 brand-font text-gray-800">Haz tu Pedido</h2>
+                        <p class="text-gray-600">Contáctanos directamente para realizar tu pedido o visitanos en nuestra ubicación.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Phone -->
+                        <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100 transition-transform hover:scale-105">
+                            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mb-4">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">WhatsApp / Teléfono</h3>
+                            <a href="https://wa.me/527331518421" target="_blank" class="text-lg text-gray-700 hover:text-green-600 font-medium transition-colors">
+                                +52 733 151 8421
+                            </a>
+                            <a href="https://wa.me/527331518421" target="_blank" class="mt-4 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors">
+                                Enviar Mensaje
+                            </a>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100 transition-transform hover:scale-105">
+                            <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl mb-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Visítanos</h3>
+                            <p class="text-center text-gray-600 text-sm mb-4 px-4">Encuéntranos fácilmente usando Google Maps.</p>
+                            <a href="https://maps.app.goo.gl/UmNQJ5hRbg2FwN7U8?g_st=aw" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors flex items-center gap-2">
+                                <i class="fas fa-directions"></i> Ver en Mapa
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <div class="w-16 h-16 bg-white rounded-full p-1 flex items-center justify-center mb-4">
+                 <img src="WhatsApp Image 2026-10-02 at 12.59.29 AM_2.jpeg" alt="Logo" class="w-full h-full object-contain">
+            </div>
+            <p class="text-xl font-bold brand-font mb-2">Mezcales Pantera</p>
+            <p class="text-gray-400 text-sm mb-4">El sabor de la tradición en cada gota.</p>
+            <p class="text-gray-500 text-xs">
+                &copy; <span id="year"></span> Mezcales Pantera. Todos los derechos reservados.<br>
+                Evita el exceso.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
